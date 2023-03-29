@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alerts</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="container-fluid">
+    <h2>Register User</h2>
+    <form class="w-25 p-2 border border-2 border-dark">
+        <div class="mb-2">
+            <label class="form-label" for="UserName">User Name</label>
+            <div>
+                <input type="text" class="form-control" name="UserName">
+                <div class="text-danger">User Name Required</div>
+            </div>
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="Password">Password</label>
+            <div>
+                <input type="password" class="form-control" name="Password">
+                <div class="text-warning">4 to 15 chars</div>
+            </div>
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="City">Your City</label>
+            <div>
+                <select class="form-select">
+                    <option>Choose City</option>
+                    <option>Delhi</option>
+                    <option>Hyd</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="City">Price Range</label>
+            <div>
+                <input class="form-range" type="range">
+            </div>
+        </div>
+        <div class="mb-2 form-switch">
+            <input class="form-check-input" type="checkbox"> <label class="form-check-label">Subscribe</label>
+        </div>
+        <div class="mb-2">
+            <button class="btn btn-primary w-100">Register</button>
+        </div>
+    </form>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

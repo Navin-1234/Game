@@ -1,0 +1,40 @@
+$theme : green;
+$padding : 20px;
+$border : 1px solid black;
+
+@function SetPadding($size) {
+    @return $padding - $size;
+}
+
+@mixin SetTheme($containerBg, $headingColor, $paraColor, $btnBg) {
+    .container {
+        padding: $padding;
+        background-color: $containerBg;
+        h2{
+            color:$headingColor;
+            padding: SetPadding(10px);
+            border: $border ;
+        }
+        p {
+            color:$paraColor;
+            padding: SetPadding(15px);
+            border: $border;
+        }
+        button {
+            background-color: $btnBg;
+            color:white;
+        }
+    }
+}
+
+@if $theme==red
+{
+    @include SetTheme(rgb(252, 218, 218),rgb(168, 0, 0) , red , red)
+}
+@else if $theme==green
+{
+   @include SetTheme(rgb(211, 255, 211),rgb(3, 87, 3) , green  ,  green)
+}
+@else {
+   @include SetTheme(rgb(223, 217, 217), black, black , black )
+}

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Bootstrap Template</title>
+    <style>
+        body {
+            margin-left: 15px;
+            margin-right: 15px;
+            box-shadow: 3px 3px 9px 10px #333;
+        }
+
+        .container-fluid {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h1 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
+
+        li {
+            list-style-type: none;
+            margin-right: 11px;
+        }
+
+        nav {
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgb(27, 24, 24);
+            margin-bottom: 20px;
+
+
+        }
+
+        header a {
+            color: gray;
+        }
+
+        nav:hover {
+            background-color: black;
+        }
+
+        button {
+
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li {
+            color: gray;
+        }
+
+        header a:hover {
+            color: white;
+        }
+
+        .package {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .package button {
+            margin-bottom: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .para-1 {
+            text-align: justify;
+            width: 800px;
+            margin-left: 400px;
+            font-size: 16px;
+
+        }
+
+        .border {
+            width: 700px;
+            border-bottom: rgb(93, 93, 93) 4px solid;
+            background-color: gray;
+            float: right;
+            margin-bottom: 25px;
+        }
+
+        .depart {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            padding-bottom: 80px;
+
+
+        }
+
+
+        .table-bordered {
+            border: 2px solid wheat;
+        }
+
+        thead {
+            background-color: #c2c2a3;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        tbody {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .depart span {
+            font-size: 30px;
+            color: darkgreen;
+        }
+
+        .box:hover {
+            box-shadow: 2px 2px 5px 8px grey;
+            padding: 10px;
+            width: 450px;
+            height: 320px;
+            margin-left: 25px;
+            transition-delay: 3s;
+        }
+
+        .box img:hover {
+            width: 430px;
+            height: 300px;
+            transition-delay: 3s;
+        }
+
+        .box {
+            box-shadow: 2px 2px 5px 8px grey;
+            padding: 10px;
+            width: 320px;
+            height: 250px;
+            margin-left: 25px;
+        }
+
+        .box img {
+            width: 300px;
+            height: 230px;
+        }
+
+        .jobs {
+            margin-top: 40px;
+            background-color: rgba(128, 128, 255, 0.66);
+            width: 100%;
+            height: 500px;
+            padding-top: 25px;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-family: Arial;
+        }
+
+        .box-2 {
+            display: flex;
+            padding-top: 20px;
+            justify-content: space-between;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .header span {
+            font-size: 60px;
+        }
+
+        .h-4 {
+            font-size: 20px;
+            font-family: Arial;
+            text-align: justify;
+        }
+
+        .about {
+            width: 167px;
+            line-height: 30px;
+            font-size: 14px;
+            margin-left: 3px;
+        }
+
+        .cv {
+            margin-top: 150px;
+
+            margin-bottom: 60px;
+
+
+        }
+
+        .one,
+        .three {
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            padding: 15px;
+        }
+
+        .two,
+        .four {
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            padding: 15px;
+        }
+
+        .number {
+            font-size: 100px;
+            color: yellow;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+        .one p,
+        .three p {
+            margin-left: 15px;
+            font-size: 15px;
+        }
+
+        .one img,
+        .three img {
+            width: 71%;
+            height: 187px;
+            margin-left: 77px;
+
+            margin-top: 50px;
+        }
+
+        .border-left {
+            width: 650px;
+            background-color: gray;
+            height: 2px;
+            margin-left: 15px;
+            border-bottom: grey;
+            margin-top: 35px;
+        }
+
+        .two img,
+        .four img {
+            margin-left: 66px;
+            margin-top: 50px;
+        }
+
+        .four img,
+        .two img {
+            width: 71%;
+            height: 187px;
+        }
+
+        .number-2 {
+            color: red;
+            font-size: 100px;
+        }
+
+        .two .question {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+        .two p {
+            margin-right: 15px;
+            font-size: 15px;
+
+        }
+
+        .border-right {
+            width: 650px;
+
+            background-color: gray;
+            height: 2px;
+            float: right;
+            margin-bottom: 25px;
+            margin-top: 35px;
+        }
+
+        .number-3 {
+            color: green;
+            font-size: 100px;
+        }
+
+        .number-4 {
+            color: #0000e6;
+            font-size: 100px;
+        }
+
+        .cv .d-flex {
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+
+        }
+
+        .box-3 {
+            background-color: rgba(153, 153, 102, 0.66);
+            width: 100%;
+            border-radius: 5px;
+            height: 500px;
+
+        }
+
+        .student {
+            display: flex;
+            margin-top: 90px;
+
+            justify-content: space-between;
+            margin-left: 100px;
+            margin-right: 100px;
+
+        }
+
+        .box-3 h3 {
+            text-align: center;
+            padding-top: 25px;
+            font-family: Arial;
+
+
+        }
+
+        .box-3 span {
+            font-size: 70px;
+
+        }
+
+        .card-7 h3 {
+            margin-top: 1px;
+            margin-bottom: 8px;
+
+        }
+
+        .card-7,
+        .card-8,
+        .card-9,
+        .card-10 p {
+            font-size: 20px;
+        }
+
+        .service {
+            width: 100%;
+            height: 600px;
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+        }
+
+        .card-two {
+            width: 450px;
+            height: 500px;
+            box-shadow: 12px -13px 30px grey;
+            margin-left: 122px;
+        }
+
+        .card-one,
+        .card-three {
+            width: 315px;
+            height: 465px;
+            box-shadow: 12px -13px 30px grey;
+            margin-left: 122px;
+        }
+
+        .service h4 {
+            margin-top: 15px;
+            font-size: 23px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .service p {
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #404040;
+            width: 100%;
+            height: 300px;
+            padding: 30px;
+        }
+
+        .list-1 {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .list-1 span {
+            text-shadow: 2px 2px 8px white;
+            color: black;
+            font-size: 22px;
+        }
+
+        #h3 {
+            text-shadow: 2px 2px 8px white;
+            color: black;
+        }
+
+        footer li:hover {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1 class="text-center">Naresh Institute And Technologies</h1>
+            <nav class="text-white p-2 pb-2 d-flex justify-content-between">
+                <ul class="d-flex m-2">
+                    <li>
+                    <li><a href="index.html"><span class="bi bi-house p-1"></span>Home</a></li>
+                    <li><a href="about.html"><span class="bi bi-question-octagon p-1"></span>About</a></li>
+                    <li><a href="service.html"><span class="bi bi-question-circle p-1"></span>Service</a></li>
+                    <li><a href="Contact-us.html"><span class="bi bi-phone p-1"></span>Contact</a></li>
+                    </li>
+                </ul>
+                <button class="dropdown">
+                    <button class="btn text-white p-2 dropdown-toggle" data-bs-toggle="dropdown"></button>
+                    <span class="bi bi-box-arrow-in-right p-1"></span>signin
+                </button>
+                <div class="dropdown-menu bg-dark">
+                    <div class="nav-item" <a href="login.html" class="dropdown-text"><span
+                            class="bi bi-box-arrow-in-right p-1"></span></a>signIn
+
+                    </div>
+                    <div class="nav-item" <a href="Register.html" class="dropdown-text"><span
+                            class="bi bi-person-plus-fill p-1"></span></a>signup
+
+                    </div>
+                    <div class="nav-item" <a href="change-password.html" class="dropdown-text"><span
+                            class="bi bi-lock-fill p-1"></span></a>change password
+
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+        <!-- <iframe src="about.html" name="frameBody"  ></iframe> -->
+        <div id="topBanner" class="carousel carousel-dark" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="../Naresh.It/images/a1.jpg" class="w-100 rounded d-block" alt="">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../Naresh.It/images/a2.jpg" class="w-100 rounded d-block" alt="">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../Naresh.It/images/a3.jpg" class="w-100 rounded d-block" alt="">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../Naresh.It/images/a4.jpg" class="w-100 rounded d-block" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="package">
+            <div>
+                <Button class="bg-warning">Show me What's in The package</Button>
+            </div>
+            <div>
+                <Button class="bg-info"> What's is The package</Button>
+            </div>
+            <div class="para-1">
+                <p>* A package is a small container in which a quantity of something is sold. Packages are either small
+                    boxes made of thin cardboard, or bags or envelopes made of paper or plastic. ... When a product is
+                    packaged, it is put into containers to be sold.</p>
+            </div>
+            <div class="border"></div>
+        </div>
+        <div class="depart">
+            <div class="table-responsive" id="table">
+                <table class="table table-hover table-bordered ">
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>Included</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M.Tech</td>
+                            <td><span class="bi bi-check-lg"></span></td>
+                        </tr>
+                        <tr>
+                            <td>B.Tech</td>
+                            <td><span class="bi bi-check-lg"></span></td>
+                        </tr>
+                        <tr>
+                            <td>MCA</td>
+                            <td><span class="bi bi-check-lg"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <img src="../Naresh.It/images/a2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="jobs">
+            <h2 class="text-center">What is The Job</h2>
+            <div class="box-2">
+
+                <div class="card-1">
+                    <div class="header">
+                        <span class="bi bi-keyboard"></span>
+                    </div>
+                    <div class="body">
+                        <h4 class="h-4">Type's of Jobs</h4>
+                        <div class="about">
+                            Volcanologist...
+                            Quantum physicist....
+                            Oceanographer....
+                            Biomedical engineer...
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card-2">
+                    <div class="header">
+                        <span class="bi bi-file-earmark-word"></span>
+                        <div class="body">
+                            <h4 class="h-4">Define job profile</h4>
+                            <div class="about">
+                                Job profile developed by the personnel department of a business might include such
+                                things as job responsibilities, required qualifications, advancement prospects.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-3">
+                    <div class="header">
+                        <span class="bi bi-wordpress"></span>
+                        <div class="body">
+                            <h4 class="h-4">Job profile summary</h4>
+                            <div class="about">
+                                Profile summary is a summary of your education, skills, career experiences, and goals.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-4">
+                    <div class="header">
+                        <span class="bi bi-display"></span>
+                        <div class="body">
+                            <h4 class="h-4">The IT skills</h4>
+                            <div class="about">
+                                Coding.
+                                Communication.
+                                Networks.
+                                Time Management.
+                                More Information Technology Skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-5">
+                    <div class="header">
+                        <span class="bi bi-display"></span>
+                        <div class="body">
+                            <h4 class="h-4">Freshers key skills</h4>
+                            <div class="about">
+                                Communication.
+                                Ability to Work Under Pressure.
+                                Decision Making.
+                                Time Management.
+                                Self-motivation.
+                                Conflict Resolution.
+                                personal skills?
+                                Leadership.
+                                Adaptability.
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-6">
+                    <div class="header">
+                        <span class="bi bi-display"></span>
+                        <div class="body">
+                            <h4 class="h-4">Personal skills</h4>
+                            <div class="about">
+                                A skill is the ability to do something well, a certain competence or proficiency. Skills
+                                are typically acquired or developed through direct experiences and training, and they
+                                can require sustained effort.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cv">
+            <div class="one">
+                <div>
+                    <span class="number">①</span>
+                    <span class="question">Why do you want this job?</span>
+                    <p> The hiring manager wants to: Learn about your career goals and how this position fits into your
+                        plan. Make sure that you are sincerely interested in the job and will be motivated to perform if
+                        hired. Find out what you know about the company, industry, position (and if you took the time to
+                        research).</p>
+                </div>
+                <div>
+                    <img src="../Naresh.It/images/ind1.jpg" alt="">
+                </div>
+                <div class="border-left"></div>
+            </div>
+
+
+            <div class="two">
+                <div>
+                    <img src="../Naresh.It/images/ind2.png" alt="">
+                </div>
+                <div>
+                    <span class="number-2">②</span>
+                    <span class="question">What is a CV example?</span>
+                    <p>A resume is a brief summary. ... If you were writing your resume you would include only the work
+                        information that relates specifically to the job you're applying for, but for a Curriculum
+                        Vitae, you would also include all your teaching experience, lab and field work..</p>
+                    <div class="border-right"></div>
+                </div>
+            </div>
+
+            <div class="three">
+                <div>
+                    <span class="number-3">③</span>
+                    <span class="question">What is a CV example?</span>
+                    <p>A resume is a brief summary. ... If you were writing your resume you would include only the work
+                        information that relates specifically to the job you're applying for, but for a Curriculum
+                        Vitae, you would also include all your teaching experience, lab and field work..</p>
+
+                </div>
+                <div>
+                    <img src="../Naresh.It/images/ind3.png" alt="">
+                </div>
+                <div class="border-left"></div>
+            </div>
+
+
+            <div class="four">
+                <div>
+                    <img src="../Naresh.It/images/ind4.jpg" alt="">
+                </div>
+                <div>
+                    <span class="number-4">④</span>
+                    <span class="question">What is a CV example?</span>
+                    <p>A resume is a brief summary. ... If you were writing your resume you would include only the work
+                        information that relates specifically to the job you're applying for, but for a Curriculum
+                        Vitae, you would also include all your teaching experience, lab and field work..</p>
+                    <div class="border-right"></div>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <button class="btn btn-primary me-3 p-3">Request Call Back</button>
+                <button class="btn btn-secondary p-3">FAQ'S</button>
+            </div>
+        </div>
+
+        <div class="box-3">
+            <h3 class="">Student Department Details</h3>
+            <div class="student">
+                <div class="card-7 text-center">
+                    <span class="bi bi-hourglass"></span>
+                    <p>Average Salary Offered</p>
+                    <h3>INR 7 L per annum</h3>
+                    <p>per annum</p>
+                </div>
+
+                <div class="card-8 text-center">
+                    <span class="bi bi-arrow-clockwise"></span>
+                    <p>Duration</p>
+                    <h3>2</h3>
+                    <p>Years</p>
+                </div>
+
+                <div class="card-9 text-center">
+                    <span class="bi bi-hand-thumbs-up"></span>
+                    <p>Average Fees Incurred</p>
+                    <h3>INR 25,000 - 2 L</h3>
+                    <p>per annum</p>
+                </div>
+
+                <div class="card-10 text-center">
+                    <span class="bi bi-flag"></span>
+                    <p>Indian Institute of Technology, [IIT] Kanpur</p>
+                    <h3>49,035</h3>
+                    <p>Kanpur</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <h2 class="text-center">SERVICES</h2>
+            <div class="d-flex m-4">
+
+                <div class="card-one">
+                    <div class="header">
+                        <img src="../Naresh.It/images/s1.jpg" class="w-100 p-1" alt="">
+                    </div>
+                    <h4 class="ms-3">WEB DESIGN !!</h4>
+                    <p class="m-3 p-2">
+                        Online ordering system helps to maintain a Better Business Relationship with your customers,
+                        which is a key factor to run any successful business.
+                    </p>
+                </div>
+                <div class="card-two">
+                    <div class="header">
+                        <img src="../Naresh.It/images/s2.jpg" class="w-100 p-2" alt="">
+                    </div>
+                    <h4 class="ms-3">IT SERVICES !!</h4>
+                    <p class="m-3 p-2">
+                        We are ideally located in Larbert meaning we can offer IT support to businesses throughout
+                        Scotland. We take the hassle and worry out of your IT system by providing preventative and
+                        proactive IT support.
+                    </p>
+                </div>
+
+                <div class="card-three">
+                    <div class="header">
+                        <img src="../Naresh.It/images/s3.png" class="w-100 p-2" alt="">
+                    </div>
+                    <h4 class="ms-3">WEB MARKETING !!</h4>
+                    <p class="m-3 p2">
+                        We are passionate about digital content creation, strategy and delivery. We deliver results by
+                        designing marketing strategies which improve our clients brand visibility.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3 id="h3" class="text-center">Naresh Technologies</h3>
+            <div class="list-1">
+                <div>
+                    <ul>
+                        <li><span class="bi bi-dot text-white"></span><span class="bi bi-facebook p-2 "></span>Facebook
+                        </li>
+                        <li><span class="bi bi-dot text-white"></span><span
+                                class="bi bi-envelope-fill p-2"></span>Google</li>
+                        <li><span class="bi bi-dot text-white"></span><span class="bi bi-twitter p-2 "></span>Twitter
+                        </li>
+                        <li><span class="bi bi-dot text-white"></span><span class="bi bi-youtube p-2"></span>Youtube
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><span class="bi bi-dot text-white"></span>Home</li>
+                        <li><span class="bi bi-dot text-white"></span>About</li>
+                        <li><span class="bi bi-dot text-white"></span>Service</li>
+                        <li><span class="bi bi-dot text-white"></span>Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><span class="bi bi-dot text-white"></span>Name : Naresh Istitute</li>
+                        <li><span class="bi bi-dot text-white"></span>Email : info@nareshit.com</li>
+                        <li><span class="bi bi-dot text-white"></span>Contact : +91-xxxxxxxxxx</li>
+                        <li><span class="bi bi-dot text-white"></span>Address : Sr nagar, Hyderabad, Telangana, India
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

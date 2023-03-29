@@ -1,0 +1,152 @@
+@import url("https://use.typekit.net/ovt6ynt.css");
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.title {
+    text-align: center;
+    padding: 50px 0px 25px 0;
+    font-size: 44px;
+    font-weight: 600;
+    color: #21222c;
+    font-family: 'playfair Display SC';
+}
+
+.wrapper {
+    background-color: #f6f8ff;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 100vh;
+    background: transparent;
+    opacity: 1;
+}
+
+.wrapper .pre {
+    background-size: cover !important;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    opacity: 0.75;
+}
+
+.wrapper .line {
+    width: 50%;
+    margin: 25px auto 0 auto;
+    height: 1px;
+    background-color: #c3d2e3;
+}
+
+h2.tab-title {
+    font-weight: 300;
+}
+
+h2.tab-title.tab-primary {
+    color: #636983;
+}
+
+h2.tab-title.tab-success {
+    color: #51a14c;
+}
+
+h2.tab-title.tab-default {
+    color: #525252;
+}
+
+h2.tab-title.tab-warning {
+    color: #b12222;
+}
+
+.container {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container .card {
+    max-width: 600px;
+    min-height: 140px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    margin: 0 auto;
+}
+
+.tabs {
+    text-align: left;
+    position: relative;
+}
+
+.tabs input {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs input+label {
+    font-weight: 300;
+    color: #666;
+    margin: 10px 0;
+    width: 110px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+}
+
+.tabs input+label:hover {
+    color: #777;
+}
+
+.tabs .tabsShadow {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    position: absolute;
+    height: 35px;
+    z-index: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.content {
+    margin: 0px auto;
+    text-align: left;
+    color: #666;
+    font-size: 13px;
+    line-height: 20px;
+    position: relative;
+    height: 220px;
+    background: hsl(232deg 16% 15%);
+}
+
+.content .item {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    position: absolute;
+    padding: 10px 20px;
+}
+
+.content p {
+    margin: 10px 0;
+
+}
+
+.glider {
+    width: 110px;
+    height: 3px;
+    background: linear-gradient(90deg, #5b3cc4 0%, #3c6cc4 100%);
+    border-radius: 3px;
+    position: absolute;
+    box-shadow: 0px 0px 8px 0px rgba(91, 60, 196, 0.4);
+    transition: all 0.3s;
+}

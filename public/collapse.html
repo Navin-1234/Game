@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Password</title>
+     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+     <script>
+         function VerifyPassword(){
+            var password = document.getElementById("txtPassword").value;
+            var regExp = /(?=.*[A-Z])\w{4,10}/;
+            var statusBar = document.getElementById("statusBar");
+            var statusText = document.getElementById("statusText");
+            if(password.match(regExp)) {
+                statusBar.style.width = "100%";
+                statusBar.className = "bg-success text-center progress-bar-striped progress-bar-animated";
+                statusText.innerHTML = "Strong Password";
+            } else {
+                if(password.length<4) {
+                    statusBar.style.width = "20%";
+                    statusText.innerHTML = "Poor Password";
+                    statusBar.className = "bg-danger text-center progress-bar-striped progress-bar-animated";
+                } else {
+                    statusBar.style.width = "70%";
+                    statusText.innerHTML = "Weak Password";
+                    statusBar.className = "bg-warning text-center progress-bar-striped progress-bar-animated";
+                }
+            }
+         }
+     </script>
+</head>
+<body class="container-fluid">
+    <dl>
+        <dt>Password</dt>
+        <dd><input type="password" class="form-control" onkeyup="VerifyPassword()" id="txtPassword"></dd>
+        <dd>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" id="statusBar">
+                    <span id="statusText"></span>
+                </div>
+            </div>
+        </dd>
+    </dl>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

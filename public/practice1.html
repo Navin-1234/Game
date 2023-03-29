@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prompt</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .class {
+            margin-top: 250px;
+        }
+    </style>
+    <script>
+        function CreateClick() {
+            foldername = prompt("Enter Folder Name", "New_Folder");
+            if (foldername == null) {
+                alert("You canceled..");
+            } else if (foldername == "") {
+                alert("Please Enter Folder Name");
+            } else {
+                document.querySelector("p").innerHTML += "Folder Created : " + foldername + "<br>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button class="btn btn-primary" onclick="CreateClick()">Create Folder</button>
+    <p></p>
+</body>
+
+</html>

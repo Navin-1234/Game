@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Dancing+Script&family=IBM+Plex+Mono:wght@200&family=Poppins:ital,wght@0,100;0,400;1,600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: #222543;
+    height: 500vh;
+}
+
+header {
+    background-color: #373b69;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo,
+#search_res {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    padding: 0 15px;
+    line-height: 35px;
+    height: 35px;
+}
+
+#search_res {
+    margin-top: 20px;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid #222543;
+    border-radius: 50px;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 820px;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    background-color: #222543;
+}
+
+.sidebar {
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+}
+
+.sidebar Genres {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    transition: 0.4s;
+}
+
+ul li:hover {
+    padding-left: 2px;
+}
+
+.sidebar ul {
+    margin-right: 16px;
+}

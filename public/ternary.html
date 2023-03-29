@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ternary</title>
+    <script>
+       function ToggleClick(){
+            var pic = document.getElementById("pic");
+            pic.style.display = (pic.style.display=='block')?'none':'block';
+            var btnToggle = document.getElementById("btnToggle");
+            btnToggle.innerHTML = (btnToggle.innerHTML=='Hide Display')?'Show Display': 'Hide Display';
+        }
+        
+        function StockChange(){
+            var optStock = document.getElementById("optStock");
+            var lblStock = document.getElementById("lblStock");
+            lblStock.innerHTML = (optStock.checked==true)?'In Stock': 'Out of Stock';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="ToggleClick()">
+        <span id="btnToggle">Show Display</span>
+    </button>
+    <br><br>
+    <img id="pic" src="../public/assets/Acs.jpg" width="100" height="100">
+    <br><br>
+    <input id="optStock" onchange="StockChange()" type="checkbox" checked> <span id="lblStock">In Stock</span>
+</body>
+</html>

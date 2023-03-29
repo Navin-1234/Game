@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+
+    </script>
+   </head>
+
+<body class="container-fluid">
+    <div class="box">
+        <form>
+            <h2 class="text-primary text-center">Register Product</h2>
+            <div class="form-group">
+                <label>Name</label>
+                <div>
+                    <input type="text" id="txtName" class="form-control" </div>
+
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <div>
+                        <input type="text" id="txtPrice" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>shipped to</label>
+                    <div>
+                        <select id="lstcities" class="form-control">
+                            <option value="Hyd">Hyderabad</option>
+                            <option value="Del">Delhi</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Manufactured</label>
+                    <div>
+                        <input type="text" id="txtMfd" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Instock</label>
+
+                    <div>
+                        <input type="checkbox" id="optstock">yes
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button onclick="Registerclick()" type="button" data-bs-target="#summary" data-bs-toggle="modal"
+                        class="btn btn-primary btn-block">Register</button>
+                </div>
+        </form>
+
+    </div>
+    <div class="modal fade" id="summary">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>product detailes</h2>
+                    <button class="close" data-bs-dismiss="modal">close</button>
+
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <tr>
+                            <td>Name</td>
+                            <td id="lblName"></td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td id="lblPrice"></td>
+                        </tr>
+                        <tr>
+                            <td>Shipped to</td>
+                            <td id="lblcity></td>
+                        </tr>
+                        <tr>
+                            <td>Stock</td>
+                            <td id="lblStock"></td>
+                        </tr>
+                        <tr>
+                            <td>Manufactured</td>
+                            <td id="lblMfd"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button data-bs-dismiss="modal" class="btn btn-primary">ok</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+
+</html>

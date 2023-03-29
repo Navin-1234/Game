@@ -1,0 +1,13 @@
+<script>
+    var topics = new Map();
+    topics.set(1, "HTML");
+    topics.set("HTML", "It is a markup language");
+    topics.set("CSS", "It defines styles");
+    topics.delete("CSS");
+    if(topics.has("CSS")==true){
+        document.write(topics.get("CSS"));
+    } else {
+       
+        document.write("CSS Not Available");
+    }
+</script>

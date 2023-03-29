@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>String</title>
+    <script>
+        function VerifyUser() {
+            var username = document.getElementById("UserName").value;
+            var userMsg = document.getElementById("userMsg");
+            if (username.length < 4) {
+                userMsg.innerHTML = "Name is too short".fontcolor('red').bold().italics();
+            } else {
+                userMsg.innerHTML = "Name is Verified...".fontcolor('green').bold();
+            }
+        }
+        function ChangeCase() {
+            var username = document.getElementById("UserName").value;
+            document.getElementById("UserName").value = username.toUpperCase();
+        }
+
+    </script>
+</head>
+
+<body>
+    <dl>
+        <dt>UserName</dt>
+        <dd><input type="text" placeholder="Name Block letters only" onkeyup="VerifyUser()" onblur="ChangeCase()"></dd>
+        <dd id="userMsg"></dd>
+    </dl>
+</body>
+
+</html>

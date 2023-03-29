@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .para {
+            text-align: center;
+        }
+
+        h5 {
+            font-family: arial;
+            margin-left: 10px;
+        }
+
+        button {
+            margin-bottom: 50px;
+        }
+
+        .img {
+            background-image: url(../public/assets/yellow2.jpg);
+            text-align: center;
+            height: 400px;
+            width: 100%;
+            padding: 100px;
+        }
+
+        .A {
+            text-align: center;
+            margin-left: 700px;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: 70px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .B {
+            background-color: rgb(35, 180, 242);
+            text-align: center;
+            height: 500px;
+            padding: 50px;
+        }
+
+        ul li span {
+            font-size: 50px;
+        }
+
+        #mu {
+            height: 31px;
+            margin-top: 43px;
+        }
+
+        .craft {
+            background-image: url(../public/assets/carft1.jpg);
+            text-align: center;
+            width: 1500px;
+            height: 400px;
+            margin-top: 50px;
+            margin-left: -50px;
+            padding: 200px;
+
+        }
+
+        .D {
+            margin-top: 120px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .E {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .F {
+            background-image: url(../pencil2.jpg);
+            text-align: center;
+            width: 600px;
+            height: 300px;
+            padding: 150px;
+
+
+
+        }
+
+        .G {
+            background-image: url(../public/assets/icecream.jpg);
+            text-align: center;
+            width: 600px;
+            height: 300px;
+            padding: 150px;
+
+
+        }
+
+        .H {
+            background-image: url(../public/assets/workspace.jpg);
+            text-align: center;
+            width: 600px;
+            height: 300px;
+            padding: 150px;
+
+
+        }
+
+        .I {
+            background-image: url(../public/assets/strawberry.jpg);
+            text-align: center;
+            width: 600px;
+            height: 300px;
+            padding: 150px;
+
+        }
+
+        .F:hover {
+            cursor: grab;
+            transition: 2s;
+            width: 500px;
+            height: 200px;
+            margin: 1px;
+        }
+
+        .G:hover {
+            cursor: grab;
+            transition: 2s;
+            margin: 1px;
+        }
+
+        .H:hover {
+            cursor: grab;
+            transition: 2s;
+        }
+
+        .I:hover {
+            cursor: grab;
+            transition: 2s;
+        }
+
+        .J {
+            background-color: rgb(0, 65, 185);
+            text-align: center;
+            height: 250px;
+            padding: 50px;
+
+
+        }
+
+        .K {
+            background-color: aliceblue;
+            height: 250px;
+            padding: 50px;
+            text-align: center;
+            font-size: 50px;
+            cursor: pointer;
+            transition: hover;
+
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <div class="img">
+        <div>
+            <p>
+            <h1> Stylish Portfolio</h1>
+            <h3>A Free Bootstrap Theme by Start Bootstrap</h3>
+            </p>
+        </div>
+        <div>
+            <button class="btn btn-primary">Find out more</button>
+        </div>
+    </div>
+    <div class="para">
+        <p>
+        <h4>Stylish Portfolio is the perfect theme for your next project!</h4><br>
+        <h5>This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at Unsplash !
+        </h5>
+        </p>
+    </div>
+    <div>
+        <button class="btn btn-dark A">What We offer</button>
+    </div>
+    <div class="B">
+        <h2>SERVICES</h2><br>
+        <h4>What We Offer</h4>
+
+        <ul>
+            <li>
+                <span class="bi bi-phone"></span>
+                <h2>Responsive</h2>
+                <h4>Looks great on any screen size</h4>
+            </li>
+            <li>
+                <span class="bi bi-pen"></span>
+                <h2>Redesigned</h2>
+                <h4>Freshly redesigned for Bootstrap 5.</h4>
+            </li>
+            <li>
+                <span class="bi bi-hand-thumbs-up"></span>
+                <h2>Favorited</h2>
+                <h4>Millions of users Start Bootstrap!</h4>
+            </li>
+            <li>
+                <img id="mu" src="/public/assets/moustache.png">
+                <h2>Question</h2>
+                <h4>I mustache you a question...</h4>
+            </li>
+        </ul>
+    </div>
+    <div class="craft">
+        <h1>Welcome to your</h1>
+        <h1>next Website!</h1>
+
+        <button class="btn btn-primary">Download now!</button>
+    </div>
+    <div class="D">
+        <h5>PORTFOLIO</h5>
+        <h1>Recent Projects</h1>
+    </div>
+    <ul class="E">
+        <li class="F">
+            <h6>Stationary</h6>
+            <h5>A yellow pencil with envelops on a clean,blue backdrop</h5>
+        </li>
+        <li class="G">
+            <h6>Icecream</h6>
+            <h5>A darkblue background with a coloured pencil,a clip and a tiny icecream cone!</h5>
+        </li>
+    </ul>
+    <ul class="E">
+        <li class="H">
+            <h6>workspace</h6>
+            <h5>A white, Workspace with some sessiors and other objects</h5>
+        </li>
+        <li class="I">
+            <h6>Strawberries</h6>
+            <h5>Strawberry is a such a tasty snacks such a little sugar on top!</h5>
+        </li>
+    </ul>
+    <div>
+        <div class="J">
+            <h2>The buttons below are impossible to resist...</h2>
+            <button class="btn btn-light">Click me!</button>
+            <button class="btn btn-dark">Look at me!</button>
+        </div>
+    </div>
+    <div>
+        <footer>
+
+            <div class="K">
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-github"></span>
+                <div style="font-size:15px" mb="50px">Copyright © Your Website 2022</div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

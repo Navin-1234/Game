@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KFC online</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body class="container-fluid bg-danger">
+    <header>
+        <img src="../public/assets/KFC1.png" width="100%" height="250px">
+    </header>
+    <section>
+        <div class="accordian" id="kfc">
+            <!--Customer Accordian-->
+            <div class="accordian-item">
+                <div class="accordian-header">
+                    <buttton data-bs-target="#customer" data-bs-toggle="collapse" class="btn btn-danger w-100 ">customer
+                        Details
+
+                    </buttton>
+
+                </div>
+                <div class="accordian-collapse collapse" id="customer" data-bs-parent="#kfc">
+                    <div class="accordian-body">
+                        <dl>
+                            <dt>customer Name</dt>
+                            <dd><input type="text" id="txtName" class="form-control"></dd>
+                            <dt>Mobile</dt>
+                            <dd><input type="text" id="txtMobile" class="form-control"></dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--Meal Accordian-->
+            <div class="accordian-item">
+                <div class="accordian-header">
+                    <button data-bs-target="#Meal" data-bs-toggle="collapse" class="btn btn-danger w-100">Select Your
+                        Meal
+
+                    </button>
+
+                </div>
+                <div class="accordian-collapse collapse" id="Meal" data-bs-parent="#kfc">
+                    <div class="accordian-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card p-2">
+                                    <img src="../public/assets/omg1.jpg" height="100" class="card-img-top" height="150">
+                                    <div class="card-header">
+                                        <h3>OMG Burger</h3>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <input type="radio" id="optBurger" value="OMG Burger" name="Meal"
+                                            class="form-check-input">
+                                        <label class="form-check-label">&#8377; 120/-</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="card p-2">
+                                    <img src="../public/assets/omg2.png" height="100" class="card-img-top" height="150">
+                                    <div class="card-header">
+                                        <h3>OMG Roller</h3>
+                                        <div class="card-footer">
+                                            <input type="radio" id="optRoller" value="OMG Roller" name="Meal"
+                                                class="form-check-input">
+                                            <label class="form-check-label">&#8377; 100/-</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

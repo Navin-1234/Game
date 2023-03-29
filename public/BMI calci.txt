@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            .card{
+                width: 450px;
+                border: 2px solid transparent;
+                background-color: wheat;
+                padding: 2px;
+                margin: 0 auto;
+            }
+            .main-body div{
+                margin: 0 auto;
+            }
+        </style>
+        <script>
+             function CalculateBmi(){
+                
+                var height=parseFloat(document.getElementById("Height").value);
+                var weight=parseFloat(document.getElementById("Weight").value);
+
+                var bmi=(weight/height**2)*100*100;
+
+                document.getElementById("results").innerHTML=`Your BMI value is :${bmi.toFixed(2)}`;
+
+                if (bmi > 0 && bmi < 18) {
+                    document.getElementById("WeightStatus").innerHTML = "[Under-Weight]";
+                    document.getElementById("WeightStatus").className="text-danger";
+                } else if (bmi > 18 && bmi < 25) {
+                    document.getElementById("WeightStatus").innerHTML = "[Normal-Weight]";
+                    document.getElementById("WeightStatus").className="text-success";
+                } else if (bmi > 25 && bmi < 30) {
+                    document.getElementById("WeightStatus").innerHTML = "[Over-Weight]";
+                    document.getElementById("WeightStatus").className="text-danger";
+                } else if (bmi > 30) {
+                    document.getElementById("WeightStatus").innerHTML = "[Obesity]";
+                    document.getElementById("WeightStatus").className="text-danger";
+                };
+             }
+             function ClearClick() {
+            parseInt(document.getElementById("Height").value = "");
+            parseInt(document.getElementById("Weight").value = "");
+           
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <div class="card mt-4">
+            <div class="header">
+                <h2 class="text-center text-white bg-dark p-2">BMI CALCULATOR</h2>
+            </div>
+            <div class="main-body">
+                <div class="col text-center mb-3">
+                    <lebel class="form-lebel">Gender :</lebel>
+                        <input type="radio" class="form-check-input" name="gender" value="male">Male
+                        <input type="radio"  class="form-check-input"  name="gender" value="female">Female
+                </div>
+                <div class="input-group w-75 ">
+                    <span class="input-group-text">Height:</span>
+                    <input type="text" class="form-control" name="Height" id="Height">
+                    <span class=" text-white bg-dark input-group-text" style="width: 50px; text-align: center;">CM</span>
+                </div>
+                <div class="input-group w-75 mt-3">
+                    <span class="input-group-text">Weight</span>
+                    <input type="text" class="form-control" name="Weight" id="Weight">
+                    <span class="text-white bg-dark input-group-text" style="width: 50px; text-align: center;">KG</span>
+                </div>
+                <div class="w-100 text-center">
+                    <button class="btn btn-dark w-25 mt-3" onclick="CalculateBmi()">Calculate</button>
+                    <button class="btn btn-danger w-25 mt-3" onclick="ClearClick()">Clear</button>
+                </div>
+            </div>
+            <div class=" w-100 mt-4">
+                <h3 id="results" class="text-dark text-center"></h3>
+                <p id="WeightStatus" style=" font-weight: bold; margin-left: 160px;"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+@import "variables.scss";
+
+@function SetPadding($size) {
+    @return $padding - $size;
+}

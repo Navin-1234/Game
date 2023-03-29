@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Switch Demo</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var categories = ["Select a Category", "Electronics", "Footwear"];
+        var electronics = ["Select Electronics", "boAt Neckband", "Sony Speaker"];
+        var footwear = ["Select Footwear", "Nike Casuals", "Lee Cooper Boot"];
+        var products = [];
+
+        function LoadCategories(){
+            for(var item of categories)
+            {
+                var option = document.createElement("option");
+                option.text= item;
+                option.value= item;
+                document.getElementById("lstCategories").appendChild(option);
+            }
+        }
+        function LoadProducts(){
+            document.getElementById("lstProducts").innerHTML = "";
+            for(var item of products)
+            {
+                var option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                document.getElementById("lstProducts").appendChild(option);
+            }
+        }
+
+        function bodyload(){
+            LoadCategories();
+        }
+        function CategoryChanged(){
+            var categoryName = document.getElementById("lstCategories").value;
+            switch(categoryName)
+            {
+                case "Electronics":
+                products = electronics;
+                LoadProducts();
+                break;
+                case "Footwear":
+                products = footwear;
+                LoadProducts();
+                break;
+                default:
+                products = ["Please Select a Category"];
+                LoadProducts();
+                break;
+            }
+        }
+        function ProductChanged(){
+            var productName = document.getElementById("lstProducts").value;
+            fetch("../data/products.json")
+            .then(response=>response.json())
+            .then(data=>{
+                var result = data.find(function(product){
+                    return product.Name == productName;
+                });
+                document.getElementById("lblName").innerHTML = result.Name;
+                document.getElementById("lblPrice").innerHTML = result.Price;
+                document.getElementById("lblRating").innerHTML = result.Rating
+                document.getElementById("imgProduct").src= result.Photo;
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+   <h2>Cascading Dropdown</h2>
+    <div style="width: 300px;">
+        <div class="mb-2">
+            <label>Select Category</label>
+            <div>
+               <select onchange="CategoryChanged()" class="form-select" id="lstCategories">
+       
+               </select>
+            </div>
+          </div>
+          <div class="mb-2">
+           <label>Select Product</label>
+           <div>
+              <select onchange="ProductChanged()" class="form-select" id="lstProducts">
+       
+              </select>
+           </div>
+         </div>
+         <div class="mb-2">
+            <label>Product Details</label>
+            <div class="card p-2">
+              <img id="imgProduct" height="150" class="card-img-top">
+              <div class="card-header">
+                 <h2 id="lblName"></h2>
+              </div>
+              <div class="card-body">
+                <dl>
+                    <dt>Price</dt>
+                    <dd id="lblPrice"></dd>
+                    <dt>Rating</dt>
+                    <dd id="lblRating"></dd>
+                </dl>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-danger w-100">Add to Cart</button>
+              </div>
+            </div>
+         </div>
+    </div>
+</body>
+</html>

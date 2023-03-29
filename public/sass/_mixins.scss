@@ -1,0 +1,23 @@
+@import "variables.scss";
+@import "functions.scss";
+
+@mixin SetTheme($containerBg, $headingColor, $paraColor, $btnBg) {
+    .container {
+        padding: $padding;
+        background-color: $containerBg;
+        h2{
+            color:$headingColor;
+            padding: SetPadding(10px);
+            border: $border ;
+        }
+        p {
+            color:$paraColor;
+            padding: SetPadding(15px);
+            border: $border;
+        }
+        button {
+            background-color: $btnBg;
+            color:white;
+        }
+    }
+}

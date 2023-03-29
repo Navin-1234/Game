@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> -->
+    <title>https://www.movie edge.com/</title>
+    <!-- <link rel="stylesheet" href="..\css\mystyle.css"> -->
+    <style>
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .container .left {
+            width: 12%;
+            height: 100%;
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            padding: 20px 0;
+            border-right: 1px solid #222;
+            position: fixed;
+        }
+
+        .container .left p {
+            font-size: 20px;
+            color: grey;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .container .left .flow {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+            padding: 15px 17px;
+            margin: 1px 0;
+            cursor: pointer;
+            transition: all 0.5s;
+            color: white;
+        }
+
+        .container .left .flow:nth-child(5) {
+            margin-bottom: 30px;
+        }
+
+        .container .left .flow:hover:not(.home) {
+            background-color: #222;
+        }
+
+        .container .left .home h2 {
+            color: red;
+            font-weight: lighter;
+        }
+
+        .container .left .home span {
+            color: red;
+        }
+
+        .container .left .home {
+            background-color: rgba(236, 35, 35, 0.212);
+        }
+
+        .container .flow span {
+            font-size: 25px;
+            color: rgb(226, 226, 226);
+        }
+
+        .container .right {
+            width: 88%;
+            position: absolute;
+            right: 0;
+            background-color: #111;
+        }
+
+        .right .heading {
+            display: flex;
+            color: rgb(226, 226, 226);
+        }
+
+        .right .heading {
+
+            /* width: 50%; */
+            padding: 8px;
+            background-color: #290e0e;
+        }
+
+        .head-content {
+            padding-left: 480px;
+            font-size: 39px;
+        }
+
+        .trending {
+            margin-top: 17px;
+            padding-left: 20px;
+        }
+
+        h1 {
+            color: rgb(226, 226, 226);
+            font-size: 30px;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        h1 span {
+            font-size: 16px;
+            color: red;
+            font-weight: lighter;
+            margin-left: 20px;
+        }
+
+        .trending .movie-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .list {
+            width: 250px;
+            height: 300px;
+            position: relative;
+        }
+
+        .list::before {
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: capitalize;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(50px);
+            transition: all 0.4s;
+        }
+
+        .list:hover::before {
+            /* this is all about the hover in the img */
+            transform: translateY(0);
+            opacity: 1;
+            width: 184px;
+            visibility: visible;
+        }
+
+        .list:nth-child(1)::before {
+            content: 'Your Place or Mine';
+        }
+
+        .list:nth-child(2)::before {
+            content: 'True Spirit';
+        }
+
+        .list:nth-child(3)::before {
+            content: 'You People';
+        }
+
+        .list:nth-child(4)::before {
+            content: 'Bloodshot';
+        }
+
+        .list:nth-child(5)::before {
+            content: 'Minions:The Rise of Gru';
+        }
+
+        .list:nth-child(6)::before {
+            content: 'Lyle, Lyle, Crocodile';
+        }
+
+        .list:nth-child(7)::before {
+            content: 'Pamela, a love story';
+        }
+
+
+        .list:nth-child(1) {
+            background: url(../public/assets/your\ place.jpeg) no-repeat center center /cover;
+        }
+
+        .list:nth-child(2) {
+            background: url(../public/assets/True\ sprit.jpeg) no-repeat center center /cover;
+        }
+
+        .list:nth-child(3) {
+            background: url(../public/assets/you\ people.jpeg) no-repeat center center /cover;
+        }
+
+        .list:nth-child(4) {
+            background: url(../public/assets/Blood\ shot.jpeg) no-repeat center center /cover;
+        }
+
+        .list:nth-child(5) {
+            background: url(../public/assets/Guru.jpeg) no-repeat center center /cover;
+        }
+
+        .list:nth-child(6) {
+            background: url(../public/assets/croc.jpeg) no-repeat center center /cover;
+        }
+
+        .list:nth-child(7) {
+            background: url(../public/assets/pamel.jpeg) no-repeat center center /cover;
+        }
+
+
+        .tv .list:nth-child(1) {
+            background: url(../public/assets/sniper.jpeg) no-repeat center center /cover;
+        }
+
+        .tv .list:nth-child(2) {
+            background: url(../public/assets/enough.jpeg) no-repeat center center /cover;
+        }
+
+        .tv .list:nth-child(3) {
+            background: url(../public/assets/sniper\ gost.jpeg) no-repeat center center /cover;
+        }
+
+        .tv .list:nth-child(4) {
+            background: url(../public/assets/tuniv.jpeg) no-repeat center center /cover;
+        }
+
+        .tv .list:nth-child(5) {
+            background: url(../public/assets/vadh.jpeg) no-repeat center center /cover;
+        }
+
+        .tv .list:nth-child(6) {
+            background: url(../public/assets/mission\ manju.jpeg) no-repeat center center /cover;
+        }
+
+        .tv .list:nth-child(7) {
+            background: url(../public/assets/kantra.jpeg) no-repeat center center /cover;
+        }
+
+
+        .tv .list:nth-child(1)::before {
+            content: 'Sniper: Ultimate Kill';
+        }
+
+        .tv .list:nth-child(2)::before {
+            content: 'Enough';
+        }
+
+        .tv .list:nth-child(3)::before {
+            content: 'Sniper: Ghost Shooter';
+        }
+
+        .tv .list:nth-child(4)::before {
+            content: 'Thunivu';
+        }
+
+        .tv .list:nth-child(5)::before {
+            content: 'Vadh';
+        }
+
+        .tv .list:nth-child(6)::before {
+            content: 'Mission Majnu';
+        }
+
+        .tv .list:nth-child(7)::before {
+            content: 'Kantara';
+        }
+
+        .tv {
+            margin-bottom: 50px;
+        }
+
+        .webseries .list:nth-child(1) {
+            background: url(../public/assets/Rocket\ Boys.jpeg) no-repeat center center /cover;
+        }
+
+        .webseries .list:nth-child(2) {
+            background: url(../public/assets/Family\ man.jpeg) no-repeat center center /cover;
+        }
+
+        .webseries .list:nth-child(3) {
+            background: url(../public/assets/Aspirants.jpeg) no-repeat center center /cover;
+        }
+
+        .webseries .list:nth-child(4) {
+            background: url(../public/assets/paatal\ lok.jpeg) no-repeat center center /cover;
+        }
+
+        .webseries .list:nth-child(5) {
+            background: url(../public/assets/) no-repeat center center /cover;
+        }
+
+        .webseries .list:nth-child(6) {
+            background: url(../image/img20.jpg) no-repeat center center /cover;
+        }
+
+        .webseries .list:nth-child(7) {
+            background: url(../image/img21.jpg) no-repeat center center /cover;
+        }
+
+        .webseries .list:nth-child(1)::before {
+            content: 'Rocket Boys';
+        }
+
+        .webseries .list:nth-child(2)::before {
+            content: 'The Family Man';
+        }
+
+        .webseries .list:nth-child(3)::before {
+            content: 'Aspirants';
+        }
+
+        .webseries .list:nth-child(4)::before {
+            content: 'Paatal Lok';
+        }
+
+        .webseries .list:nth-child(5)::before {
+            content: 'Asur: Welcome to Your Dark Side';
+        }
+
+        .webseries .list:nth-child(6)::before {
+            content: 'Kota Factory';
+        }
+
+        .webseries .list:nth-child(7)::before {
+            content: 'Scam 1992: The Harshad Mehta Story';
+        }
+
+        .webseries {
+            margin-bottom: 50px;
+        }
+
+        /* Footer */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .footer-container {
+            background-color: black;
+            padding: 2rem 0 4rem 0;
+        }
+
+        .footer {
+            width: 80%;
+            height: 40vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .footer-heading {
+            display: flex;
+            flex-direction: column;
+            margin-right: 4rem;
+
+        }
+
+        .footer-heading h2 {
+            margin-bottom: 2rem;
+        }
+
+        .footer-heading a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-heading a:hover {
+            color: red;
+            transition: 0.3 ease-out;
+        }
+
+        .footer-email-form h2 {
+            margin-bottom: 2rem;
+        }
+
+        #footer-email {
+            width: 250px;
+            height: 40px;
+            border-radius: 4px;
+            outline: none;
+            border: none;
+            padding-left: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #footer-email::placeholder {
+            color: #b1b1b1;
+
+        }
+
+        #footer-email-btn {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: red;
+            outline: none;
+            border: none;
+            color: white;
+            font: 1rem;
+        }
+
+        #footer-email-btn:hover {
+            cursor: pointer;
+            background-color: #337AF1;
+            transition: all 0.4s ease-out;
+        }
+
+        @media screen and (max-width:1150px) {
+            .footer {
+                height: 50vh;
+            }
+
+            .footer-email-form {
+                margin-top: 4rem;
+            }
+        }
+
+        @media screen and (max-width:820px) {
+            .footer {
+                padding-top: 2rem;
+            }
+
+            .footer-email-form {
+                margin-top: 4rem;
+            }
+        }
+
+        @media screen and (max-width:720px) {
+            .footer-3 {
+                display: none;
+            }
+
+            .footer-email-form {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <p>Media</p>
+            <div class="flow home">
+                <span class="material-icons">Home</span> <!-- this is inline elements-->
+            </div>
+            <div class="flow">
+                <span class="material-icons">Movie</span>
+            </div>
+            <div class="flow">
+                <span class="material-icons">TV</span>
+            </div>
+            <div class="flow">
+                <span class="material-icons">Search</span>
+            </div>
+            <p>Account</p>
+            <div class="flow">
+                <span class="material-icons">Settings</span>
+            </div>
+            <div class="flow">
+                <span class="material-icons">sign in</span>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="heading">
+                <div class="head-content">
+                    Movie Edge
+                </div>
+            </div>
+            <div class="trending">
+                <h1>Trending Movies <span>see all</span></h1>
+
+                <div class="movie-container">
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                </div>
+            </div>
+            <div class="trending">
+                <h1>Top Movies <span>see all</span></h1>
+
+                <div class="movie-container tv">
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                </div>
+            </div>
+            <div class="trending">
+                <h1>Webseries <span>see all</span></h1>
+
+                <div class="movie-container webseries">
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                </div>
+            </div>
+            <div class="footer-container">
+                <div class="footer">
+                    <div class="footer-heading footer-1">
+                        <h2>About us</h2>
+                        <a href="#">Media Room</a>
+                        <a href="#">Investor Relations</a>
+                        <a href="#">Insta Tickets</a>
+                        <a href="#">Dolby</a>
+                        <a href="#">Career</a>
+                    </div>
+                    <div class="footer-heading footer-2">
+                        <h2>Get in Touch</h2>
+                        <a href="#">Location</a>
+                        <a href="#">Support</a>
+                        <a href="#">customers</a>
+                        <a href="#">Investors</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                    <div class="footer-heading footer-3">
+                        <h2>Social Media</h2>
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Youtube</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                    <div class="footer-email-form">
+                        <h2>Join our newsletter</h2>
+                        <input type="email" placeholder="your email address" id="footer-email">
+                        <input type="submit" value="sign-up" id="footer-email-btn">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

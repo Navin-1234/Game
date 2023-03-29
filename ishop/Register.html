@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+       $(function(){
+            $("#btnRegister").click(function(){
+                var user = {
+                    "UserId": $("#UserId").val(),
+                    "UserName": $("#UserName").val(),
+                    "Password": $("#Password").val(),
+                    "Age": parseInt($("#Age").val()),
+                    "Email": $("#Email").val(),
+                    "Mobile": $("#Mobile").val()
+                };
+                $.ajax({
+                    method: "POST",
+                    url: "http://localhost:4000/registeruser",
+                    data: user
+                });
+                alert("Registered Successfully..");
+                location.href="login.html";
+            })
+
+            $("#UserId").keyup(function(){
+                var userid = $("#UserId").val();
+                $.ajax({
+                    method: "GET",
+                    url: "http://localhost:4000/getusers",
+                    success: function(data){
+                        for(var user of data) {
+                            if(user.UserId==userid) {
+                                $("#UserMsg").html("User Id Taken - Try Another").css({'color':'red'});
+                                break;
+                            } else {
+                                $("#UserMsg").html("User ID Available").css({'color':'green'});
+                            }
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>Register</h2>
+    <dl>
+        <dt>User Id</dt>
+        <dd><input type = "text" id="UserId"></dd>
+        <dd id="UserMsg"></dd>
+        <dt>UserName</dt>
+        <dd><input type = "text" id="UserName"></dd>
+        <dt>Password</dt>
+        <dd><input type = "text" id = "Password"></dd>
+        <dt>Age</dt>
+        <dd><input type = "text" id = "Age"></dd>
+        <dt>Email</dt>
+        <dd><input type = "text" id = "Email"></dd>
+        <dt>Mobile</dt>
+        <dd><input type = "text" id = "Mobile"></dd>
+    </dl>
+    <button id="btnRegister">Register</button>
+    <br><br>
+    <a href="login.html">Existing User</a>
+</body>
+</html>
